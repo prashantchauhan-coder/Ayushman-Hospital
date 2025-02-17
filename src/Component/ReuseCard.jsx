@@ -1,5 +1,6 @@
 import React from 'react'
 import '../Component/ReuseCard.scss'
+import Linkedin from '../assets/LinkedIn.png';
 
 const ReuseCard = ({titleimage,title,desc}) => {
     return (
@@ -10,7 +11,7 @@ const ReuseCard = ({titleimage,title,desc}) => {
                 id='Doctor-one'
             />
             <img
-                src="\src\assets\LinkedIn.png"
+                src={Linkedin}
                 alt="LinkedIn"
                 id='LinkedIn'
             />
@@ -22,4 +23,4 @@ const ReuseCard = ({titleimage,title,desc}) => {
     )
 }
 
-export default ReuseCard
+export default ReuseCard;

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../Component/RatingCard.scss'
+import starimg from '../assets/Star 5.png';
 
 const RatingCard = ({RatingImg,authorName,ratingDecription}) => {
     return (
@@ -16,19 +17,19 @@ const RatingCard = ({RatingImg,authorName,ratingDecription}) => {
                         {
                             [
                                 {
-                                    "title": "/src/assets/Star 5.png"
+                                    "title": starimg
                                 },
                                 {
-                                    "title": "/src/assets/Star 5.png"
+                                    "title": starimg
                                 },
                                 {
-                                    "title": "/src/assets/Star 5.png"
+                                    "title": starimg
                                 },
                                 {
-                                    "title": "/src/assets/Star 5.png"
+                                    "title": starimg
                                 },
                                 {
-                                    "title": "/src/assets/Star 5.png"
+                                    "title": starimg
                                 },
                             ].map((data, index) => (
                                 <img
