@@ -1,0 +1,64 @@
+    .Articals_container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .Articals {
+            width:27vw;
+            padding: 10px;
+
+            .Articals_heading {
+                font-size: 42px;
+                font-weight: 600;
+                color: #011632;
+                line-height: 50px;
+            }
+
+            .Articals_description {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 20px;
+                color: #3C4959;
+            }
+        }
+    }
+
+    .News_card_Container {
+        display: flex;
+        justify-content:space-around;
+        margin: 20px 0px;
+    }
+
+    .cont {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width:450px) {
+
+        .Articals_container {
+            display: flex;
+            justify-content: center;
+
+            .Articals{
+                width: 90vw;
+
+                .Articals_heading{
+                    font-size: 11vw;
+                }
+            }
+
+            .btn_divss {
+                display: none;
+            }
+
+        }
+        .News_card_Container {
+            overflow: hidden;
+            gap: 20px;
+           
+        }
+        .cont{
+            display: none;
+        }
+    }

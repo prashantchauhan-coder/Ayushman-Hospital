@@ -1,0 +1,43 @@
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+
+    .service_heading {
+        font-weight: 600;
+        font-size: 62px;
+        line-height: 74px;
+        color: #011632;
+    }
+
+    .service_para {
+        font-weight: 400;
+        font-size: 18px;
+        width: 90vw;
+        line-height: 27px;
+        color: #3C4959;
+        text-align: center;
+    }
+}
+
+.servicecard_container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    width: 100vw;
+    gap: 10px;
+}
+
+@media (max-width:450px) {
+    .service {
+        .service_heading {
+            font-size: 10vw;
+        }
+    }
+
+    .servicecard_container {
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,85 @@
+@mixin common($center) {
+    display: flex;
+    justify-content: $center;
+
+
+}
+
+.section {
+    @include common(center);
+    margin: 40px 0;
+
+    .dantelsection {
+        width: 90vw;
+        padding: 20px 0;
+        background-color: #E6F6FE;
+
+        .dantels_container {
+            width: 100%;
+            @include common(space-around);
+            align-items: center;
+
+            #dantist {
+                width: 30%;
+                border-radius: 10px;
+            }
+
+            .parent {
+                padding: 5px 10px;
+
+                .hello {
+                    font-weight: 600;
+                    font-size: 42px;
+                    line-height: 50px;
+                    color: #011632;
+                }
+
+                .hii {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 17px;
+                    margin: 20px 0;
+                    color: #3C4959;
+                }
+
+                .same {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #3C4959;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:450px) {
+    .section {
+        padding: 20px 0;
+
+        .dantelsection {
+            width: 100vw;
+
+            .dantels_container {
+                flex-direction: column-reverse;
+                gap: 20px;
+
+                #dantist {
+                    width: 90vw;
+                    border-radius: 10px;
+                }
+
+                .parent {
+                    .hello {
+                        font-weight: 600;
+                        font-size:8vw;
+                        line-height: 45px;
+                        color: #011632;
+                    }
+                }
+
+            }
+        }
+    }
+
+}

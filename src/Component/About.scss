@@ -1,0 +1,27 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+
+    .about_heading {
+        font-size: 62px;
+        font-weight: 600;
+        color: #011632;
+    }
+
+    .flexcontainer {
+        display: flex;
+        gap: 20px;
+        padding: 20px 30px;
+        box-shadow: 0px 20px 70px 0px #011632;
+    }
+}
+
+@media (max-width:450px) {
+    .flexcontainer {
+        width: 90vw;
+        overflow: hidden;
+    }
+}

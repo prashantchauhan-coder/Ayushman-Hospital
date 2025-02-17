@@ -1,0 +1,119 @@
+.Question_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 20px 0px;
+
+    .Question_section_title {
+        font-weight: 600;
+        font-size: clamp(28px, 5vw, 42px);
+        color: #011632;
+        text-align: center;
+    }
+
+    .Question_section_desc {
+        font-size: clamp(14px, 4vw, 16px);
+        text-align: center;
+        color: #3C4959;
+    }
+
+    .Answer {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 40px;
+
+        .answers_sec {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px 30px;
+            border: 2px solid #FFFFFF;
+            background-color: #1376F8;
+            border-radius: 10px;
+
+            .one {
+                height: 46px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #FFFFFF;
+
+                .line_img {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    border: 2px solid #FFFFFF;
+                    position: relative;
+
+                    #line {
+                        position: absolute;
+                        width: 8px;
+                        height: 3px;
+                        top: 36%;
+                        right: 5%;
+                    }
+                }
+
+                .ek {
+                    font-size: clamp(16px, 3vw, 18px);
+                    width: 340px;
+                    font-weight: 500;
+                    color: #FFFFFF;
+                }
+            }
+
+            .ek_ans {
+                font-size: clamp(14px, 3vw, 18px);
+                color: #FFFFFF;
+                max-width: 100%;
+            }
+        }
+
+        .second {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px 10px;
+            border-bottom: 1px solid #011632;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .ek_ {
+                font-size: clamp(14px, 3vw, 16px);
+                color: #011632;
+            }
+
+            .line-line {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .Question_section {
+
+    .Question_section_title {
+        text-align: start;
+    }
+
+    .Question_section_desc {
+        text-align: left;
+    }
+
+    .Answer {
+        max-width: 100%;
+
+        .answers_sec {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .second {
+            width: 100%;
+        }
+    }
+}
+}

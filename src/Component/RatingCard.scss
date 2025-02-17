@@ -1,0 +1,56 @@
+.rating_card {
+    width: 28vw;
+    box-shadow: 0px 10px 40px 0px #00000014;
+    border-radius: 10px;
+    padding: 20px 20px;
+
+    .stars {
+        width: 20vw;
+        display: flex;
+        justify-content: space-between;
+
+        & .small {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        .head_para {
+
+            & .heads {
+                font-weight: 500;
+                font-size: 24px;
+                color: #011632;
+                line-height: 30px;
+            }
+
+            & .star__container {
+                display: flex;
+                justify-content: space-between;
+
+                & .four_star {
+                    width: 20px;
+                }
+            }
+        }
+    }
+
+    .rating_desc {
+        font-weight: 400;
+        margin-top: 10px;
+        font-size: 16px;
+        color: #3C4959;
+        line-height: 24px;
+    }
+}
+
+@media (max-width:450px) {
+    .rating_card {
+        width: 90vw;
+
+        .stars {
+            width: 60vw;
+        }
+    }
+
+}

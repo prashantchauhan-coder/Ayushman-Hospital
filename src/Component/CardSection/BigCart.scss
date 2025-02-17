@@ -1,0 +1,109 @@
+$color: #CECECE;
+
+.big_card {
+    width:100vw;
+    padding:50px;
+    border: 1px $color;
+    display: flex;
+    justify-content: space-between;
+
+    .big_card_one {
+        width:35vw;
+
+        & h3 {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 40px;
+            margin: 25px 0;
+            color: #011632;
+        }
+
+        & p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 18px;
+            margin: 25px 0;
+            letter-spacing: 1%;
+            color: #3C4959;
+        }
+
+        & .mobile {
+            width:30vw;
+            display: flex;
+            justify-content: space-between;
+            background-color: green;
+            border: 1px solid $color;
+            border-radius: 10px;
+
+            .inputfield {
+                width:71%;
+                border: 1px solid $color;
+                padding: 15px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+
+            .btn1 {
+                width: 117px;
+                height: 50px;
+                padding: 15px 30px;
+                background-color: #1376F8;
+                color: #FFFFFF;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24.8px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border: none;
+            }
+
+        }
+    }
+
+    & .big_card_two {
+        width:26vw;
+        height: 25vw;
+        border-radius: 10px;
+        background-color: #25B4F879;
+        position: relative;
+
+        & #Rectangle {
+            position: absolute;
+            height:100%;
+            top: 10%;
+            right: 20%;
+            z-index: 999;
+        }
+    }
+}
+
+@media (max-width:450px) {
+    .big_card{
+        flex-direction: column;
+        padding: 20px 20px;
+        gap: 20px;
+
+        .big_card_one{
+            width:90vw;
+            padding: 5px 5px;
+
+            & h3{
+                font-size:10vw;
+            }
+
+            & .mobile{
+                width:100%;
+            }
+        }
+        .big_card_two{
+            width:90vw;
+            height: 35vh;
+
+            & #Rectangle{
+                position: static;
+                width:100%;
+            }
+        }
+    }
+    
+}

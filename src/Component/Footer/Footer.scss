@@ -1,0 +1,91 @@
+
+.footersection {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 20px;
+
+    .footer {
+        width: 100%;
+        max-width: 1230px;
+        display: flex;
+        flex-direction: column;
+        align-items:end;
+        padding: 20px;
+
+        #horizontal_line {
+            width: 100%;
+            border: 1px solid #011632;
+            margin: 10px 0;
+        }
+
+        .list_container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; // Mobile view ke liye wrap hoga
+
+            li {
+                list-style: none;
+
+                .anker {
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: #3C4959;
+                    padding:8px;
+                    text-decoration: none;
+
+                    &:hover{
+                        background-color: #011632;
+                    }
+                }
+            }
+        }
+
+        .footer_links {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; // Mobile ke liye wrap karenge
+
+            .copyright {
+                font-size: 14px;
+                font-weight: 400;
+                color: #011632;
+                text-align: center;
+            }
+
+            .links_aline {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+
+                .link_images {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}
+
+// **Media Query for Mobile View**
+@media (max-width: 768px) {
+    .footer {
+        align-items: center;
+        text-align: center;
+
+        .list_container {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer_links {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+}

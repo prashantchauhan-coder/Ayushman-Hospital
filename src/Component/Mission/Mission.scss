@@ -1,0 +1,58 @@
+.mission-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 2rem;
+
+    .mission-wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        width: 100%;
+        align-items: center;
+        gap: 2rem;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+
+    .mission-content {
+        flex: 1;
+        max-width: 600px;
+
+        h2 {
+            font-size:11vw;
+            margin-bottom: 1rem;
+            color: #011632;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-top: 1.5rem;
+            color: #011632;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #3C4959;
+        }
+    }
+
+    .mission-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    }
+}

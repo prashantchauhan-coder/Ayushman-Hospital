@@ -1,0 +1,20 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+
+    .contactheading{
+        font-weight: 600;
+        font-size: 62px;
+        line-height: 70px;
+        color: #011632;
+    }
+    .contactpara{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: #3C4959;
+    }
+}

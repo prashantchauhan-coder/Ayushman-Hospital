@@ -1,0 +1,57 @@
+$colors: #FFFFFF;
+$weight: 500;
+
+.reusecard {
+    width:22vw;
+    position: relative;
+
+    #Doctor-one{
+        width: 100%;
+        border-radius: 10px;
+        height: 100%;
+    }
+    #LinkedIn{
+        width: 40px;
+        height: 40px;
+        top: 5%;
+        right: 5%;
+        position: absolute;
+    }
+
+    .reusecard_container {
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        width:20vw;
+        border-radius: 10px;
+        z-index: 999;
+        padding: 10px 20px;
+        background: linear-gradient(to left,  #25B4F800,#25B4F84D);
+
+        .reusecard_container_heading {
+            font-size: 24px;
+            font-weight: $weight;
+            color: $colors;
+        }
+
+        .reusecard_container_para {
+            font-size: 16px;
+            font-weight: $weight;
+            color: $colors ;
+            line-height: 24px;
+        }
+
+    }
+}
+
+@media (max-width:450px) {
+    .reusecard{
+        width:90vw;
+        height: 35vh;
+
+        .reusecard_container{
+            width: 80vw;
+        }
+    }
+    
+}

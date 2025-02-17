@@ -1,0 +1,175 @@
+.experience_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+
+    .experience_container_one {
+        width: 55vw;
+
+        .experience_heading {
+
+            & h1 {
+                font-weight: 600;
+                font-size: 55px;
+                color: #011632;
+            }
+        }
+
+        .experience_paragraph {
+            width: 33vw;
+            padding: 15px 0;
+
+            & p {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 27.9px;
+                letter-spacing: 1.5%;
+                color: #3C4959;
+            }
+        }
+
+        .book_contact {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            .phone {
+                width: 11vw;
+                border: 1px;
+
+                #phone_heading_para {
+                    width: 100%;
+
+
+                    .phone_heading {
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 21.7px;
+                        letter-spacing: 2%;
+                        color: #1376F8;
+                    }
+
+                    #phone_para {
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .card {
+            width: 25vw;
+            border-radius: 16.67px;
+            border: 1px;
+            padding: 15px 10px;
+            box-shadow: 0px 8.33px 41.67px 0px rgba(0, 0, 0, 0.08);
+
+            .card_section {
+                display: flex;
+
+                & #img {
+                    width: 41.67px;
+                    height: 41.79px;
+                }
+
+                .card_heading {
+                    margin: 0 10px;
+
+                    &#heding1 {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 21.7px;
+                        letter-spacing: 2%;
+                        color: #011632;
+                    }
+
+                    &#heding2 {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 18.6px;
+                        letter-spacing: 1.5%;
+                        color: #011632;
+                    }
+                }
+            }
+
+            .card_para {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18.6px;
+                letter-spacing: 1.5%;
+                color: #011632;
+            }
+        }
+    }
+
+    .images {
+        width: 50vw;
+        position: relative;
+
+        & #img_one {
+            width: 40vw;
+            position: relative;
+            z-index: 1;
+
+        }
+
+        & #img_two {
+            width: 40vw;
+            border: 3px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+    }
+}
+
+@media (max-width:450px) {
+
+    .experience_container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .experience_container_one {
+            width: 90vw;
+
+            .experience_heading {
+
+                & h1 {
+                    font-size:8vw;
+                }
+            }
+
+            .experience_paragraph {
+                width: 100%;
+            }
+
+            .book_contact {
+
+                .phone {
+                    width:35vw;
+                }
+            }
+            .card{
+                width: 80vw;
+            }
+        }
+
+        .images {
+            width:90vw;
+            flex-wrap: wrap;
+            margin: 20px 0;
+
+            & #img_one {
+                width:80vw;
+            }
+
+            & #img_two {
+                width: 100%;
+            }
+        }
+    }
+}
