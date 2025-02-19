@@ -22,7 +22,6 @@ const About = () => {
         <Specialists />
         <Technology />
         <div className='flexcontainer'>
-
           <Card
             titleimg={img1}
             title="Root Canal Treatment"
