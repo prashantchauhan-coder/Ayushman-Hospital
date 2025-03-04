@@ -10,7 +10,7 @@ $center: center;
     overflow: hidden;
 
     .reatingSection {
-        width:30vw;
+        width: 30vw;
         padding: 10px 0;
 
         & h2 {
@@ -25,14 +25,14 @@ $center: center;
             font-size: 16px;
             font-weight: 400;
             line-height: 16px;
-            color:$same;
-            text-align:$center;
+            color: $same;
+            text-align: $center;
         }
     }
 
     .cardflex {
         display: flex;
-        width:93vw;
+        width: 93vw;
         gap: 20px;
     }
 
@@ -59,10 +59,25 @@ $center: center;
 }
 
 @media (max-width:450px) {
-   .reatingcontainer{
-    .reatingSection{
-        width: 90vw;
+    .reatingcontainer {
+        .reatingSection {
+            width: 90vw;
+        }
     }
-   }
 
+}
+
+@media (min-width:760px) and (max-width:1024px) {
+    .reatingcontainer {
+        .cardflex {
+            gap: 39px
+        }
+
+        .reatingSection {
+            p {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
 }

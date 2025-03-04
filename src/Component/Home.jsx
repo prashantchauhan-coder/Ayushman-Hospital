@@ -23,17 +23,21 @@ const Home = () => {
             <Navbar />
             <Experience />
             <div id='cards_section_card'>
-                <div id='card_container'>
+                <div className='card_contain'>
                     <Card
                         titleimg={img1}
                         title="Root Canal Treatment"
                         paragraph="Root canal treatment (endodontics) is a dental procedure used to treat infection at the centre of a tooth."
                     />
+                </div>
+                <div className='card_contain'>
                     <Card
                         titleimg={img2}
                         title="Cosmetic Dentist"
                         paragraph="Cosmetic dentistry is the branch of dentistry that focuses on improving the appearance of your smile."
                     />
+                </div>
+                <div className='card_contain'>
                     <Card
                         titleimg={img3}
                         title="Dental Implants"

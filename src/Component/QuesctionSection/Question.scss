@@ -57,7 +57,7 @@
 
                 .ek {
                     font-size: clamp(16px, 3vw, 18px);
-                    width: 340px;
+                    // width: 340px;
                     font-weight: 500;
                     color: #FFFFFF;
                 }
@@ -95,25 +95,62 @@
 @media (max-width: 450px) {
     .Question_section {
 
-    .Question_section_title {
-        text-align: start;
-    }
-
-    .Question_section_desc {
-        text-align: left;
-    }
-
-    .Answer {
-        max-width: 100%;
-
-        .answers_sec {
-            width: 100%;
-            padding: 10px;
+        .Question_section_title {
+            text-align: start;
         }
 
-        .second {
-            width: 100%;
+        .Question_section_desc {
+            text-align: left;
+        }
+
+        .Answer {
+            max-width: 100%;
+
+            .answers_sec {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .second {
+                width: 100%;
+            }
         }
     }
 }
+
+@media (min-width:760px) and (max-width:1024px){
+    .Question_section {
+        .Answer {
+            .second {
+                .line-line {
+                    width: 35px;
+                    height: 35px;
+                }
+
+                .ek_ {
+                    font-size: clamp(14px, 3vw, 24px);
+                }
+            }
+
+            .answers_sec {
+                .ek_ans {
+                    font-size: clamp(14px, 3vw, 24px);
+                }
+
+                .one {
+                    .ek {
+                        font-size: clamp(16px, 3vw, 24px);
+                    }
+                }
+            }
+        }
+
+        .Question_section_title {
+            font-size: clamp(28px, 5vw, 51px);
+        }
+
+        .Question_section_desc {
+            font-size: 30px;
+        }
+    }
 }

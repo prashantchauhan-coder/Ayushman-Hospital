@@ -1,14 +1,14 @@
 $color: #CECECE;
 
 .big_card {
-    width:100vw;
-    padding:50px;
+    width: 100vw;
+    padding: 50px;
     border: 1px $color;
     display: flex;
     justify-content: space-between;
 
     .big_card_one {
-        width:35vw;
+        width: 35vw;
 
         & h3 {
             font-weight: 600;
@@ -28,7 +28,7 @@ $color: #CECECE;
         }
 
         & .mobile {
-            width:30vw;
+            width: 30vw;
             display: flex;
             justify-content: space-between;
             background-color: green;
@@ -36,7 +36,7 @@ $color: #CECECE;
             border-radius: 10px;
 
             .inputfield {
-                width:71%;
+                width: 71%;
                 border: 1px solid $color;
                 padding: 15px;
                 border-top-left-radius: 10px;
@@ -61,7 +61,7 @@ $color: #CECECE;
     }
 
     & .big_card_two {
-        width:26vw;
+        width: 26vw;
         height: 25vw;
         border-radius: 10px;
         background-color: #25B4F879;
@@ -69,7 +69,7 @@ $color: #CECECE;
 
         & #Rectangle {
             position: absolute;
-            height:100%;
+            height: 100%;
             top: 10%;
             right: 20%;
             z-index: 999;
@@ -78,32 +78,53 @@ $color: #CECECE;
 }
 
 @media (max-width:450px) {
-    .big_card{
+    .big_card {
         flex-direction: column;
         padding: 20px 20px;
         gap: 20px;
 
-        .big_card_one{
-            width:90vw;
+        .big_card_one {
+            width: 90vw;
             padding: 5px 5px;
 
-            & h3{
-                font-size:10vw;
+            & h3 {
+                font-size: 10vw;
             }
 
-            & .mobile{
-                width:100%;
+            & .mobile {
+                width: 100%;
             }
         }
-        .big_card_two{
-            width:90vw;
+
+        .big_card_two {
+            width: 90vw;
             height: 35vh;
 
-            & #Rectangle{
+            & #Rectangle {
                 position: static;
-                width:100%;
+                width: 100%;
             }
         }
     }
-    
+
+}
+
+@media (min-width:750px) and (max-width:1024px) {
+    .big_card {
+        .big_card_one {
+            p {
+                font-size: 21px;
+                line-height: 20px;
+            }
+
+            h3 {
+                font-size: 38px;
+            }
+        }
+
+        .big_card_two {
+            width: 30vw;
+            height: 30vw;
+        }
+    }
 }

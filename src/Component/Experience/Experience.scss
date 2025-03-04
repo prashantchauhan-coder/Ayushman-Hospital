@@ -139,7 +139,7 @@
             .experience_heading {
 
                 & h1 {
-                    font-size:8vw;
+                    font-size: 8vw;
                 }
             }
 
@@ -150,25 +150,48 @@
             .book_contact {
 
                 .phone {
-                    width:35vw;
+                    width: 35vw;
                 }
             }
-            .card{
+
+            .card {
                 width: 80vw;
             }
         }
 
         .images {
-            width:90vw;
+            width: 90vw;
             flex-wrap: wrap;
             margin: 20px 0;
 
             & #img_one {
-                width:80vw;
+                width: 80vw;
             }
 
             & #img_two {
                 width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width:760px) and (max-width:1024px) {
+    .experience_container {
+        .experience_container_one {
+            .card {
+                width: 30vw;
+            }
+
+            .experience_paragraph {
+                p {
+                    font-size:2vw;
+                }
+            }
+
+            .experience_heading {
+                & h1 {
+                    font-size:4vw;
+                }
             }
         }
     }

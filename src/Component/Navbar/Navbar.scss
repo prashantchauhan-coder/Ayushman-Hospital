@@ -44,10 +44,11 @@
                             background-color: #1376F8;
                         }
                     }
+
                     .active {
-                       color:orangered;
+                        color: orangered;
                         font-weight: bold;
-                      }
+                    }
                 }
             }
 
@@ -91,7 +92,7 @@
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .header {
 
         .nav {
@@ -103,7 +104,7 @@
                 top: 0;
                 left: -100%;
                 width: 70%;
-                height: 50vh;
+                height: 90vh;
                 background: #E6F6FE;
                 box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
                 flex-direction: column;
@@ -116,13 +117,25 @@
                     flex-direction: column;
                     width: 150px;
                     gap: 1rem;
-            }
+
+                    li {
+                        a {
+                            font-size: 30px;
+                        }
+                    }
+                }
+
                 .container {
                     gap: 2rem;
 
+                    .livenow {
+                        width: 6rem;
+                        height: 6rem
+                    }
+
                     .btn {
                         padding: 0.5rem 1rem;
-                        font-size: 0.9rem;
+                        font-size:1.2rem;
                     }
                 }
             }

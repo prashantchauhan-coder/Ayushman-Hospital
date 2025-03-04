@@ -72,7 +72,7 @@
                 .parent {
                     .hello {
                         font-weight: 600;
-                        font-size:8vw;
+                        font-size: 8vw;
                         line-height: 45px;
                         color: #011632;
                     }
@@ -82,4 +82,30 @@
         }
     }
 
+}
+
+@media (min-width:760px) and (max-width:1024px) {
+    .section {
+        .dantelsection {
+            .dantels_container {
+                gap: 10px;
+
+                .parent {
+                    .hii {
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
+
+                    .same {
+                        font-size: 24px;
+                        line-height: 30px;
+                    }
+                }
+
+                #dantist {
+                    width: 50%;
+                }
+            }
+        }
+    }
 }

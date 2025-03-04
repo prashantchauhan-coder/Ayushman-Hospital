@@ -74,3 +74,17 @@ $text: center;
     }
     
 }
+
+@media (min-width:760px) and (max-width:1024px) {
+    #hero_section{
+        .video {
+            width: 90vw;
+            height: 40vh;
+        }
+        .hero{
+            .hero__h1 {
+               font-size: 35px;
+           }
+        } 
+    }
+}

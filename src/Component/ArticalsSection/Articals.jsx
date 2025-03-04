@@ -25,65 +25,81 @@ const Articals = () => {
         </div>
       </div>
       <div className='News_card_Container'>
-        <NewsCard
-          newsImg={Newsimgone}
-          newsTitle="Care of your Teeth"
-          newsButton="Self Care"
-          newsDesc="Lorem ipsum dolor sit amet consectetur."
-          author="~Anita Jackson"
-        />
-        <NewsCard
-          newsImg={Newsimgtwo}
-          newsTitle="Care of your Teeth"
-          newsButton="Self Care"
-          newsDesc="Lorem ipsum dolor sit amet consectetur."
-          author="~Anita Jackson"
-        />
-        <NewsCard
-          newsImg={Newsimgthree}
-          newsTitle="Care of your Teeth"
-          newsButton="Self Care"
-          newsDesc="Lorem ipsum dolor sit amet consectetur."
-          author="~Anita Jackson"
-        />
-        <NewsCard
-          newsImg={Newsimgfour}
-          newsTitle="Care of your Teeth"
-          newsButton="Self Care"
-          newsDesc="Lorem ipsum dolor sit amet consectetur."
-          author="~Anita Jackson"
-        />
+        <div className='supercard'>
+          <NewsCard
+            newsImg={Newsimgone}
+            newsTitle="Care of your Teeth"
+            newsButton="Self Care"
+            newsDesc="Lorem ipsum dolor sit amet consectetur."
+            author="~Anita Jackson"
+          />
+        </div>
+        <div className='supercard'>
+          <NewsCard
+            newsImg={Newsimgtwo}
+            newsTitle="Care of your Teeth"
+            newsButton="Self Care"
+            newsDesc="Lorem ipsum dolor sit amet consectetur."
+            author="~Anita Jackson"
+          />
+        </div>
+        <div className='supercard'>
+          <NewsCard
+            newsImg={Newsimgthree}
+            newsTitle="Care of your Teeth"
+            newsButton="Self Care"
+            newsDesc="Lorem ipsum dolor sit amet consectetur."
+            author="~Anita Jackson"
+          />
+        </div>
+        <div className='supercard last_card'>
+          <NewsCard
+            newsImg={Newsimgfour}
+            newsTitle="Care of your Teeth"
+            newsButton="Self Care"
+            newsDesc="Lorem ipsum dolor sit amet consectetur."
+            author="~Anita Jackson"
+          />
+        </div>
       </div>
       <div className='News_card_Container'>
-        <NewsCard
-          newsImg={Newsimgfive}
-          newsTitle="Care of your Teeth"
-          newsButton="Self Care"
-          newsDesc="Lorem ipsum dolor sit amet consectetur."
-          author="~Anita Jackson"
-        />
-        <NewsCard
-          newsImg={Newsimgsix}
-          newsTitle="Care of your Teeth"
-          newsButton="Self Care"
-          newsDesc="Lorem ipsum dolor sit amet consectetur."
-          author="~Anita Jackson"
-        />
-        <NewsCard
-          newsImg={Newsimgseven}
-          newsTitle="Care of your Teeth"
-          newsButton="Self Care"
-          newsDesc="Lorem ipsum dolor sit amet consectetur."
-          author="~Anita Jackson"
-        />
-        <NewsCard
-          newsImg={Newsimgeight}
-          newsTitle="Care of your Teeth"
-          newsButton="Self Care"
-          newsDesc="Lorem ipsum dolor sit amet consectetur."
-          author="~Anita Jackson"
-        />
-      </div>
+        <div className='supercard'>
+          <NewsCard
+            newsImg={Newsimgfive}
+            newsTitle="Care of your Teeth"
+            newsButton="Self Care"
+            newsDesc="Lorem ipsum dolor sit amet consectetur."
+            author="~Anita Jackson"
+          />
+        </div>
+        <div className='supercard'>
+          <NewsCard
+            newsImg={Newsimgsix}
+            newsTitle="Care of your Teeth"
+            newsButton="Self Care"
+            newsDesc="Lorem ipsum dolor sit amet consectetur."
+            author="~Anita Jackson"
+          />
+        </div>
+        <div className='supercard'>
+          <NewsCard
+            newsImg={Newsimgseven}
+            newsTitle="Care of your Teeth"
+            newsButton="Self Care"
+            newsDesc="Lorem ipsum dolor sit amet consectetur."
+            author="~Anita Jackson"
+          />
+        </div>
+        <div className='supercard last_card'>
+          <NewsCard
+            newsImg={Newsimgeight}
+            newsTitle="Care of your Teeth"
+            newsButton="Self Care"
+            newsDesc="Lorem ipsum dolor sit amet consectetur."
+            author="~Anita Jackson"
+          />
+        </div>
+      </div >
       <div className='cont'>
         <Button text="Check Out More" />
       </div>
