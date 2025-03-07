@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import './Home.scss';
 import Articals from './ArticalsSection/Articals';
 import BigCard from './CardSection/BigCard';
@@ -17,45 +17,53 @@ import img1 from '../assets/teeth.png';
 import img2 from '../assets/smile.png';
 import img3 from '../assets/implant.png';
 
+
 const Home = () => {
+
+    const [isPlaying, setIsPlaying] = useState(false);
     return (
         <>
-            <Navbar />
-            <Experience />
-            <div id='cards_section_card'>
-                <div className='card_contain'>
-                    <Card
-                        titleimg={img1}
-                        title="Root Canal Treatment"
-                        paragraph="Root canal treatment (endodontics) is a dental procedure used to treat infection at the centre of a tooth."
-                    />
-                </div>
-                <div className='card_contain'>
-                    <Card
-                        titleimg={img2}
-                        title="Cosmetic Dentist"
-                        paragraph="Cosmetic dentistry is the branch of dentistry that focuses on improving the appearance of your smile."
-                    />
-                </div>
-                <div className='card_contain'>
-                    <Card
-                        titleimg={img3}
-                        title="Dental Implants"
-                        paragraph="A dental implant is an artificial tooth root that’s placed into your jaw to hold a prosthetic tooth or bridge.."
-                    />
-                </div>
-            </div>
-            <BigCard />
-            <DantelSection />
-            <HeltSection />
-            <Hero />
-            <Testmonials />
-            <Reating />
-            <Articals />
-            <Question />
-            <SecondFooter />
-            <Footer />
-
+            {isPlaying ? (
+                <Hero isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
+            ) : (
+                <>
+                    <Navbar />
+                    <Experience />
+                    <div id='cards_section_card'>
+                        <div className='card_contain'>
+                            <Card
+                                titleimg={img1}
+                                title="Root Canal Treatment"
+                                paragraph="Root canal treatment (endodontics) is a dental procedure used to treat infection at the centre of a tooth."
+                            />
+                        </div>
+                        <div className='card_contain'>
+                            <Card
+                                titleimg={img2}
+                                title="Cosmetic Dentist"
+                                paragraph="Cosmetic dentistry is the branch of dentistry that focuses on improving the appearance of your smile."
+                            />
+                        </div>
+                        <div className='card_contain'>
+                            <Card
+                                titleimg={img3}
+                                title="Dental Implants"
+                                paragraph="A dental implant is an artificial tooth root that’s placed into your jaw to hold a prosthetic tooth or bridge.."
+                            />
+                        </div>
+                    </div>
+                    <BigCard />
+                    <DantelSection />
+                    <HeltSection />
+                    <Hero isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
+                    <Testmonials />
+                    <Reating />
+                    <Articals />
+                    <Question />
+                    <SecondFooter />
+                    <Footer />
+                </>
+            )}
         </>
     )
 }

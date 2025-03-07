@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from "react";
 import '../ReatingSection/Reating.scss';
 import RatingCard from '../RatingCard';
 import RatingImg1 from '../../assets/ratingimage1.png';
@@ -8,51 +8,69 @@ import leftArrow from '../../assets/leftArrow.png';
 import rightArrow from '../../assets/rightArrow.png';
 
 const Reating = () => {
+    const sliderRef = useRef(null);
+
+    const hendleLeft = () => {
+        if (sliderRef.current) {
+            sliderRef.current.scrollLeft -= 350;
+        }
+    };
+
+    const handleRight = () => {
+        if (sliderRef.current) {
+            sliderRef.current.scrollLeft += 350;
+        }
+    };
+    const reatings = [
+        {
+            reatingimage: RatingImg1,
+            name: "Thomas daniel",
+            desc: "Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources."
+        },
+        {
+            reatingimage: RatingImg2,
+            name: "Alena Alex", desc:
+                "Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources."
+        },
+        {
+            reatingimage: RatingImg3,
+            name: "Thomas Edison",
+            desc: "Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources."
+        },
+        {
+            reatingimage: RatingImg1,
+            name: "Thomas daniel",
+            desc: "Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources."
+        },
+    ];
+
+
     return (
         <section className='reatingcontainer'>
             <div className='reatingSection'>
                 <h2 className='h2'>Our Happy Clients</h2>
                 <p className='p'>We use only the best quality materials on the market in order to provide the best products to our patients.</p>
             </div>
-            <div className='cardflex'>
-                <div className='same_class'>
-                    <RatingCard
-                        RatingImg={RatingImg1}
-                        authorName="Thomas daniel"
-                        ratingDecription="Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources."
-                    />
-                </div>
-                <div className='same_class'>
-                    <RatingCard
-                        RatingImg={RatingImg2}
-                        authorName="Alena Alex"
-                        ratingDecription="Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources."
-                    />
-                </div>
-                <div className='same_class'>
-                    <RatingCard
-                        RatingImg={RatingImg3}
-                        authorName="Thomas Edison"
-                        ratingDecription="Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources."
-                    />
-                </div>
-                <div className='same_class'>
-                    <RatingCard
-                        RatingImg={RatingImg1}
-                        authorName="Thomas daniel"
-                        ratingDecription="Phosfluorescently synergize covalent outsourcing through functional strategic theme areas. Assertively scale strategic portals without distinctive relationships. Holisticly cultivate tactical e-services before fully researched sources."
-                    />
-                </div>
+            <div className='cardflex' ref={sliderRef}>
+                {reatings.map((img, index) => (
+                    <div className="same_class" key={index}>
+                        <RatingCard
+                            RatingImg={img.reatingimage}
+                            authorName={img.name}
+                            ratingDecription={img.desc}
+                        />
+                    </div>
+                ))}
             </div>
             <div className='arrow_parent'>
-                <div className='arros_child'>
+                <div className='arros_child' onClick={hendleLeft}>
                     <img
                         src={leftArrow}
                         alt="leftArrow"
                         className='arrow_one_child'
                     />
                 </div>
-                <div className='arros_child'>
+                <div className='arros_child' onClick={handleRight}>
                     <img
                         src={rightArrow}
                         alt="RightArrow"
@@ -64,4 +82,4 @@ const Reating = () => {
     )
 }
 
-export default Reating
+export default Reating;

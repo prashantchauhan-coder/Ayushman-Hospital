@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../Navbar/Navbar.scss';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import logoimg from '../../assets/logo.png';
 import livepeople from '../../assets/livepeople.png';
 import popupbutton from '../../assets/popupbutton.png';
@@ -8,10 +8,15 @@ import popupbutton from '../../assets/popupbutton.png';
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
 
     const handleClick = () => {
         setIsOpen(!isOpen);
     };
+
+    const goToSignUp=()=>{
+        navigate('/SignupPage')
+    }
 
     return (
         <header className='header'>
@@ -40,7 +45,7 @@ const Navbar = () => {
                             alt="Live People"
                             className='livenow'
                         />
-                        <button className='btn'>Book Now</button>
+                        <button className='btn'onClick={goToSignUp}>Book Now</button>
                     </div>
                 </div>
                 <div className='popup' onClick={handleClick}>

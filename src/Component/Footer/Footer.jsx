@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Footer/Footer.scss';
-import { Link } from 'react-router-dom';
+import { Link, Links } from 'react-router-dom';
 import facebook from '../../assets/facebook.png';
 import instagram from '../../assets/instagram.png';
 import LinkedIn from '../../assets/LinkedIn.png';
@@ -23,16 +23,30 @@ const Footer = () => {
                     <p className='copyright'>All rights reserved ® uifry.com  | Terms and conditions apply!</p>
                     <ul className='links_aline'>
                         {[
-                            { "links": `${facebook}` },
-                            { "links": `${instagram}` },
-                            { "links": `${LinkedIn}` },
-                            { "links": `${twitter}` }
+                            {
+                                links: facebook,
+                                url: "https://www.facebook.com"
+                            },
+                            {
+                                links: instagram,
+                                url: "https://www.instagram.com"
+                            },
+                            {
+                                links: LinkedIn,
+                                url: "https://www.linkedin.com"
+                            },
+                            {
+                                links: twitter,
+                                url: "https://www.twitter.com"
+                            }
                         ].map((data, index) => (
-                            <img
-                                key={index}
-                                src={data.links}
-                                className='link_images'
-                            />
+                            <Link to={data.url} key={index}>
+                                <img
+                                    key={index}
+                                    src={data.links}
+                                    className='link_images'
+                                />
+                            </Link>
                         ))
                         }
                     </ul>

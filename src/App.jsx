@@ -5,6 +5,8 @@ import Services from './Component/Services'
 import Blogs from './Component/Blogs'
 import About from './Component/About'
 import Contact from './Component/Contact'
+import SignupPage from './Component/SignupPage'
+import LoginPage from './Component/LoginPage'
 
 function App() {
 
@@ -29,6 +31,14 @@ function App() {
       {
         path: "/Contact",
         element: <Contact />
+      },
+      {
+        path: "/SignupPage",
+        element: <SignupPage />
+      },
+      {
+        path: "/LoginPage",
+        element: <LoginPage />
       }
     ]
   )

@@ -33,8 +33,12 @@ $center: center;
     .cardflex {
         display: flex;
         width: 93vw;
-        gap: 20px;
+        gap: 10px;
+        padding: 10px 10px;
+        scroll-behavior: smooth;
+        overflow-X:hidden;
     }
+    
 
     .arrow_parent {
         width: 200px;
@@ -48,6 +52,7 @@ $center: center;
             height: 44px;
             background-color: #011632;
             padding: 0 25px;
+            cursor: pointer;
 
             .arrow_one_child {
                 width: 40px;
