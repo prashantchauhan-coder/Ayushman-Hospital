@@ -4,8 +4,14 @@ import Button from '../Button';
 import Ellipse from '../../assets/Ellipse.png';
 import Maskdoctor from '../../assets/Mask-doctor.png';
 import icondas from '../../assets/icon-das.png';
+import { useNavigate } from 'react-router-dom';
 
 const Experience = () => {
+
+    const nevagate=useNavigate()
+    const bookAppointment=()=>{
+        nevagate('/SignupPage')
+    }
 
     let experienceHeading = "Get Ready For Your Best";
     let experienceSecond = "Ever Dental Experience!";
@@ -25,7 +31,7 @@ const Experience = () => {
                     <p>{experiencePara}</p>
                 </div>
                 <div className='book_contact'>
-                    <Button text="Get Started" />
+                    <Button text="Get Started" bookAppointment={bookAppointment}/>
                     <div className='phone'>
                         <div id='phone_heading_para'>
                             <h2 className='phone_heading'>{emeregency}</h2>

@@ -3,6 +3,7 @@ import "./Specialists.scss";
 import specilistsimg1 from '../../assets/specilistsimg1.png';
 import specilistsimg2 from '../../assets/specilistsimg2.png';
 import specilistsimg3 from '../../assets/specilistsimg3.png';
+import { useNavigate } from "react-router-dom";
 
 const specialists = [
     {
@@ -29,6 +30,12 @@ const specialists = [
 ];
 
 const Specialists = () => {
+    const navigate = useNavigate()
+
+    const bookNow = () => {
+        navigate('/Contact')
+    }
+
     return (
         <section className="specialists-container">
             <h2>Meet Our Specialists</h2>
@@ -47,7 +54,7 @@ const Specialists = () => {
                             {specialist.name} <span>({specialist.specialty})</span>
                         </h3>
                         <p>{specialist.description}</p>
-                        <button>Book an appointment</button>
+                        <button onClick={bookNow}>Book an appointment</button>
                     </div>
                 </div>
             ))}

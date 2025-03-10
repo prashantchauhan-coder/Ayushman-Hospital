@@ -15,13 +15,13 @@ const Card = ({ titleimg, title, paragraph }) => {
 
             <h2>{title}</h2>
             <p>{paragraph}</p>
-            <div className='link_image'>
+            {/* <div className='link_image'>
                 <a href="">Learn More</a>
                 <img
                     src={ArrowRightCircle}
                     alt="Arrow Right Circle"
                 />
-            </div>
+            </div> */}
         </div>
     )
 }

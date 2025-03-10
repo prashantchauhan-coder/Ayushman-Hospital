@@ -32,8 +32,10 @@ $center: center;
 
     .cardflex {
         display: flex;
-        width: 93vw;
-        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        gap: 15px;
         padding: 10px 10px;
         scroll-behavior: smooth;
         overflow-X:hidden;
@@ -75,7 +77,7 @@ $center: center;
 @media (min-width:760px) and (max-width:1024px) {
     .reatingcontainer {
         .cardflex {
-            gap: 39px
+            gap:39px
         }
 
         .reatingSection {

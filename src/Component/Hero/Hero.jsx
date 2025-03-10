@@ -1,12 +1,9 @@
 import { React, useState } from 'react'
 import '../Hero/Hero.scss'
-import Button from '../Button'
 import Vector from '../../assets/Vector.png'
 import videoFile from '../../assets/doctortreatment.mp4'
 
 export const Hero = ({ isPlaying, setIsPlaying }) => {
-
-
 
     let heroHeading = "We’re welcoming new patients and can’t wait to meet you."
     let heroPara = "We use only the best quality materials on the market in order to provide the best products to our patients."
@@ -36,7 +33,6 @@ export const Hero = ({ isPlaying, setIsPlaying }) => {
                             />
                         </div>
                     </div>
-                    <Button text="Watch Playlist" />
                 </section>
             )}
         </>

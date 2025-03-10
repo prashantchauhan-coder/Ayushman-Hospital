@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import '../QuesctionSection/Question.scss'
 // import Linkimg from '../../assets/Line.png';
 import Addimg from '../../assets/add.png';
+import mineus from '../../assets/mineus.png'
 
 const Question = () => {
 
   const [showAnswer, setShowAnswer] = useState(null)
-  const [showAns, setShowAns] = useState()
+  const [showAns, setShowAns] = useState(false)
 
   const handleShow = () => {
     setShowAns(!showAns)
@@ -39,7 +40,7 @@ const Question = () => {
           <div className='one'>
             <h1 className='ek'>Can I see who reads my email campaigns?</h1>
             <img
-              src={Addimg}
+              src={showAns ? mineus : Addimg}
               alt="Link img"
               id='line' onClick={handleShow}
             />
@@ -53,7 +54,7 @@ const Question = () => {
                 <h1 className='ek_'>{info.title}</h1>
               </li>
               <img
-                src={Addimg}
+                src={showAnswer === index ? mineus : Addimg}
                 alt="Add img"
                 className='line-line' onClick={() => togleButton(index)}
               />

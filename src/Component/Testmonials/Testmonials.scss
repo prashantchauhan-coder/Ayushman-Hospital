@@ -27,10 +27,12 @@
 
         .flex {
             display: flex;
+            justify-content:space-between;
+            align-items: center;
             width: 90vw;
             gap: 15px;
             padding: 10px 0;
-            scroll-behavior: smooth;
+           scroll-behavior: smooth;
             overflow-X:hidden;
         }
     }

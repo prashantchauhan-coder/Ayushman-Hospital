@@ -10,9 +10,16 @@ import Newsimgfive from '../../assets/newsimg-five.png';
 import Newsimgsix from '../../assets/newsimg-six.png';
 import Newsimgseven from '../../assets/newsimg-seven.png';
 import Newsimgeight from '../../assets/newsimg-eight.png';
+import { useNavigate } from 'react-router-dom';
 
 
 const Articals = () => {
+  const navigate = useNavigate()
+
+  const bookAppointment = () => {
+    navigate('/LatestNewsPage')
+  }
+
   return (
     <>
       <div className='Articals_container'>
@@ -21,7 +28,7 @@ const Articals = () => {
           <p className='Articals_description'>We use only the best quality materials on the market in order to provide the best products to our patients.</p>
         </div>
         <div className='btn_divss'>
-          <Button text="View All" />
+          <Button text="View All" bookAppointment={bookAppointment} />
         </div>
       </div>
       <div className='News_card_Container'>

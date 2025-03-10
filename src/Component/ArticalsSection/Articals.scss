@@ -32,6 +32,7 @@
     .cont {
         display: flex;
         justify-content: center;
+        display: none;
     }
 
     @media (max-width:450px) {

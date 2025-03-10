@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar/Navbar'
 import './Contact.scss'
 import ContactForm from './ContactForm/ContactForm'
@@ -6,6 +6,11 @@ import Question from './QuesctionSection/Question'
 import Footer from './Footer/Footer'
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <><Navbar />
       <div className='contact'>

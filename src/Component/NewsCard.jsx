@@ -9,7 +9,7 @@ const NewsCard = ({newsImg,newsButton,newsTitle,newsDesc,author}) => {
                 alt=""
                 className='News_img'
             />
-            <button className='news_btn'>{newsButton}</button>
+            {/* <button className='news_btn'>{newsButton}</button> */}
             <h2 className='news_heading'>{newsTitle}</h2>
             <p className='news_para'>{newsDesc}</p>
             <h3 className='name'>{author}</h3>

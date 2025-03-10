@@ -21,6 +21,7 @@ import img3 from '../assets/implant.png';
 const Home = () => {
 
     const [isPlaying, setIsPlaying] = useState(false);
+    
     return (
         <>
             {isPlaying ? (

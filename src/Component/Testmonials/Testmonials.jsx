@@ -1,4 +1,4 @@
-import React, { useRef} from 'react';
+import React, { useRef ,useEffect} from 'react';
 import '../Testmonials/Testmonials.scss';
 import ReuseCard from '../ReuseCard';
 import DoctorImageOne from '../../assets/Doctor-one.png';
@@ -14,15 +14,29 @@ const Testmonials = () => {
 
     const slideLeft = () => {
         if (sliderRef.current) {
-            sliderRef.current.scrollLeft -= 330;
+            sliderRef.current.scrollLeft -= 300;
         }
     };
 
     const slideRight = () => {
         if (sliderRef.current) {
-            sliderRef.current.scrollLeft += 330;
+            sliderRef.current.scrollLeft += 300;
         }
     };
+    useEffect(() => {
+        const autoScroll = setInterval(() => {
+            if (sliderRef.current) {
+                const maxScroll = sliderRef.current.scrollWidth - sliderRef.current.clientWidth;
+                if (sliderRef.current.scrollLeft >= maxScroll) {
+                    sliderRef.current.scrollLeft = 0; 
+                } else {
+                    sliderRef.current.scrollLeft += 300; 
+                }
+            }
+        }, 2000); 
+
+        return () => clearInterval(autoScroll); 
+    }, []);
 
     const doctors = [
         {

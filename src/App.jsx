@@ -7,6 +7,7 @@ import About from './Component/About'
 import Contact from './Component/Contact'
 import SignupPage from './Component/SignupPage'
 import LoginPage from './Component/LoginPage'
+import LatestNewsPage from './Component/LatestNewsPage';
 
 function App() {
 
@@ -39,6 +40,10 @@ function App() {
       {
         path: "/LoginPage",
         element: <LoginPage />
+      },
+      {
+        path: "/LatestNewsPage",
+        element: <LatestNewsPage />
       }
     ]
   )

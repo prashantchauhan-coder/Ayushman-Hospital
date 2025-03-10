@@ -2,8 +2,16 @@ import React from 'react';
 import '../DentalSection/DantelSection.scss';
 import Button from '../Button';
 import Dantist from '../../assets/Dantist.png';
+import { useNavigate } from 'react-router-dom';
 
 const DantelSection = () => {
+
+     const navigate = useNavigate();
+
+    const bookAppointment=()=>{
+        navigate('/Contact')
+    }
+    
 
     let firstTreatment = "Why choose Smile for all ";
     let secondTreatment = "Your Dental Treatments?"
@@ -41,7 +49,7 @@ const DantelSection = () => {
                                 <p className='same' key={index}>{deta.title}</p>
                             ))
                         }
-                        <Button text="Book an Appointment" />
+                        <Button text="Book an Appointment" bookAppointment={bookAppointment}/>
                     </div>
                 </div>
             </div>

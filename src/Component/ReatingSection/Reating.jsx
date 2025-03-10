@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef,useEffect } from "react";
 import '../ReatingSection/Reating.scss';
 import RatingCard from '../RatingCard';
 import RatingImg1 from '../../assets/ratingimage1.png';
@@ -12,15 +12,30 @@ const Reating = () => {
 
     const hendleLeft = () => {
         if (sliderRef.current) {
-            sliderRef.current.scrollLeft -= 350;
+            sliderRef.current.scrollLeft -= 300;
         }
     };
 
     const handleRight = () => {
         if (sliderRef.current) {
-            sliderRef.current.scrollLeft += 350;
+            sliderRef.current.scrollLeft += 300;
         }
     };
+    useEffect(() => {
+        const autoScroll = setInterval(() => {
+            if (sliderRef.current) {
+                const maxScroll = sliderRef.current.scrollWidth - sliderRef.current.clientWidth;
+                if (sliderRef.current.scrollLeft >= maxScroll) {
+                    sliderRef.current.scrollLeft = 0; 
+                } else {
+                    sliderRef.current.scrollLeft += 300; 
+                }
+            }
+        }, 2000); 
+
+        return () => clearInterval(autoScroll); 
+    }, []);
+
     const reatings = [
         {
             reatingimage: RatingImg1,
