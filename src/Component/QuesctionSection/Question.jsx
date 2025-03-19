@@ -50,7 +50,7 @@ const Question = () => {
         {faqData.map((info, index) => (
           <div className='maindiv' key={index}>
             <div className='second' >
-              <li >
+              <li style={{listStyle:"none"}}>
                 <h1 className='ek_'>{info.title}</h1>
               </li>
               <img

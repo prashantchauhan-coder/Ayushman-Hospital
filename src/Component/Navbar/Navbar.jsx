@@ -32,7 +32,7 @@ const Navbar = () => {
                 <div className={`fullscreen ${isOpen ? "open" : ""}`}>
 
                     <ul>
-                        <li><NavLink to="/" style={{ fontWeight: "600" }} className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink></li>
+                        <li><NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink></li>
                         <li><NavLink to="/Services" className={({ isActive }) => (isActive ? "active" : "")}>Services</NavLink></li>
                         <li><NavLink to="/Blogs" className={({ isActive }) => (isActive ? "active" : "")}>Blogs</NavLink></li>
                         <li><NavLink to="/About" className={({ isActive }) => (isActive ? "active" : "")}>About</NavLink></li>
